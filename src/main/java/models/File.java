@@ -32,6 +32,36 @@ public class File {
         this.id = id;
     }
 
+    @Column(name = "name")
+    public String getName(){
+        return this.name;
+    }
+    @Column(name = "extension")
+    public String getExtension(){
+        return this.extension;
+    }
+    @Column(name = "size")
+    public int getSize(){
+        return  this.size;
+    }
+    @Column(name = "folder")
+    public Folder getFolder(){
+        return this.folder;
+    }
 
+    public void setName(String name) {
+        this.name = name;
+    }
 
+    public void setExtension(String extension) {
+        this.extension = extension;
+    }
+
+    public void setSize(int size) {
+        this.size = size;
+    }
+
+    public void setFolder(Folder folder) {
+        this.folder = folder;
+    }
 }
