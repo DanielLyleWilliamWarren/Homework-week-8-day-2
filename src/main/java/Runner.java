@@ -24,6 +24,10 @@ public class Runner {
         File file4 = new File("Watchin Engerlan get beat in world cup semi", ".pdf", 20, images);
         DBHelper.save(file4);
 
+        List<File> files = DBHelper.getAll(File.class);
+
+        File foundFile = DBHelper.find(File.class, file1.getId());
+
         List<File> filesInFolder = FolderDB.getFilesForFolder(images);
 
     }
