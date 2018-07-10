@@ -44,7 +44,8 @@ public class File {
     public int getSize(){
         return  this.size;
     }
-    @Column(name = "folder")
+    @ManyToOne
+    @JoinColumn(name = "folder_id", nullable = false)
     public Folder getFolder(){
         return this.folder;
     }
